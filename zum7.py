@@ -1910,27 +1910,18 @@ def Hasil_OkCp():
 				width=48,
 				style="bold purple"
 				),
-			justify="center"
-		)
-		sleep(
-			1
-			)
-		exit(
-	)
+			justify="center")
+		sleep(1)
+		exit()
 if __name__=='__main__':
 	try:
-		os.mkdir(
-			'OK'
-		)
+		os.mkdir('OK')
 	except:
 		pass
 	try:
-		os.mkdir(
-			'CP'
-		)
+		os.mkdir('CP')
 	except:
 		pass
-	Main_Menu(
-)
+	Main_Menu()
 
 #gggggg
