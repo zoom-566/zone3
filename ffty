@@ -1,0 +1,59 @@
+import os
+import re
+import bs4
+import sys
+import json
+import rich
+import time
+import random
+import datetime
+import requests
+from time import sleep, strftime
+from rich.console import Console
+from rich.columns import Columns
+from rich import print as Cetak
+from rich.tree import Tree
+from rich.panel import Panel
+from random import choice as rc
+from random import randint as rr
+from random import randrange as rg
+from rich.progress import Progress
+from rich.progress import SpinnerColumn
+from rich.progress import TextColumn
+def compare_phone_time():
+    try:
+        phone_datetime = datetime.now()
+        response = requests.get('http://worldtimeapi.org/api/ip') # HIDE
+        data = response.json()
+        datetime_str = data['datetime'] # HIDE
+        datetime_obj = datetime.strptime(datetime_str, '%Y-%m-%dT%H:%M:%S.%f%z') # HIDE
+        timezone_str = data['timezone']
+        timezone = pytz.timezone(timezone_str)
+        world_datetime = datetime_obj.astimezone(timezone)
+        if phone_datetime.date() == world_datetime.date() and phone_datetime.time().replace(second=0, microsecond=0) == world_datetime.time().replace(second=0, microsecond=0):
+            os.system("clear")
+        else:
+            print("ليش مرجع تاريخ الجهاز؟ 🐧")
+            sys.exit()
+    except Exception as e:
+        print(f"حدث خطأ: {e}")
+compare_phone_time()
+import requests,time,pyfiglet,datetime
+now = datetime.datetime.today() # HIDE
+now = datetime.datetime.today()
+mm = str(now.month) # HIDE
+dd = str(now.day)
+yyyy = str(now.year) # HIDE
+hour = str(now.hour)
+mi = str(now.minute)
+ss = str(now.second)
+t=(mm + "/" + dd + "/" + yyyy + " " + hour + ":" + mi + ":" + ss) # HIDE
+hours = (now.hour)
+x = datetime.datetime.now()
+g= datetime.datetime(2024, 12, 31, 12, 0 ,0) # HIDE
+if (x.strftime("%x"))>(g.strftime("%x")): # HIDE
+ print('\033[1;32m تم ايقاف الاداه راسل المطوره ࢪيفن') # HIDE
+ exit()
+else:
+ 	print(" ")
+ 	os.system("clear")
