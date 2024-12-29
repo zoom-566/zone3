@@ -454,7 +454,7 @@ def Main_Menu():
 		nama_fb = data_efbi[
 			'name'
 		]
-		uids_fb = data_efbi[
+		uids_fb = data_bi[
 			'id'
 		]
 	except (requests.exceptions.ConnectionError):
